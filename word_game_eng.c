@@ -199,6 +199,8 @@ int main() {
 	
 	int delete_save = 0;
 	
+	int temp_hint;
+	
 	char guess[word_length];
 	
 	while ( num_correct < word_length ) {
@@ -245,6 +247,8 @@ int main() {
 		
 		temp = num_correct;
 		
+		temp_hint = 0;
+		
 		if ( compareString(guess, "hint") == 1 ){
 			if ( lives_num == 1) {
 				printf("You can't use a hint if lives_num is equal to 1\n");
@@ -258,6 +262,8 @@ int main() {
 					lives_num = lives_num/2;
 					printf("Lives: %d\n", lives_num);
 					check[i] = 1;
+					temp_hint = i;
+					guess[0] = words[rand_num][temp_hint];
 					break;
 				}
 			}
@@ -291,7 +297,7 @@ int main() {
 					if (check[i] != 1) {
 						
 						while ( j < 1 ){
-						printf("right guess\n");	
+						printf("right guess\n", guess);	
 						j++;
 					}
 						num_correct++;
