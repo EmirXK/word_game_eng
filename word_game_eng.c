@@ -3,6 +3,7 @@
 #include <time.h>
 #include <conio.h>
 #include <ctype.h>
+#include <limits.h>
 #define SIZE CHAR_MAX
 
 int lengthString(char arrx[]);
@@ -290,7 +291,7 @@ int main() {
 					if (check[i] != 1) {
 						
 						while ( j < 1 ){
-						printf("right guess\n", guess);	
+						printf("right guess\n");	
 						j++;
 					}
 						num_correct++;
