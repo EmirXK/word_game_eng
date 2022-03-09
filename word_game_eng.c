@@ -6,6 +6,8 @@
 #include <limits.h>
 #define SIZE CHAR_MAX
 
+// https://www.mediafire.com/file/imv9rnkbeejr1a2/word_game_eng_V2.3.zip/file
+
 int lengthString(char arrx[]);
 
 int compareString(char arrx[], char arry[]);
